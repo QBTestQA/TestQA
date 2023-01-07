@@ -1,0 +1,30 @@
+Было 7 падений, все из них были исправлены.
+Кликнув по перечеркнутым строкам (т.к. они исправлены) можно посмотреть причины падения.
+1) _970001 filling in test data base
+Причина: Недоступен объект. Внизу указывается номер строки ошибки 
+Step (Given I open hyperlink "e1cib/list/Document.SalesOrder") has not been executed. The line of the tree #1614
+а также сам объект: Errors occurred upon checking data population - 'Purchase invoice 2 dated 22.07.2021 09:38:02'
+
+2) _024004 create SI using form link/unlink
+Причина: Step (And I go to line in "BasisesTree" table) has not been executed. The line of the tree #2910
+Не найдено значение 7 в колонке <Quantity>: Value <7,000 > from <Quantity > column is not found.
+
+3) _024027 cancel line in the SO and create SI
+Ошибка возникла при записи документа. 
+Причина: не найден заголовок кнопки.
+
+4) _2060018 check link form in the PI with 2 lines with the same items
+Ошибка возникла на шаге: Step (And I go to line in "BasisesTree" table) has not been executed. The line of the tree #4252
+Возможно, такой строки в таблице не было обнаружено?
+
+5) _0154149 create Cash statement
+Ошибка возникла на шаге Step (And I go to line in "List" table) has not been executed. The line of the tree #2808
+Причина: не найдена таблица "List"
+
+6) _015450 check message output for SO when trying to create a purchase order/SC
+Ошибка возникла на шаге Step (Then the number of "BasisesTree" table lines is "?????" 0) has not been executed. The line of the tree #1816
+Причина: Ожидали номер строки 0, а полученный -2. Expected number of lines in <BasisesTree> table is ????? 0 and actual number is <2>
+
+7) _092003 check serial lot number in the Retail return receipt
+Ошибка возникла на шаге Step (And "ResultTable" spreadsheet document contains lines:) has not been executed. The line of the tree #1311
+Причина: не найдена строка №6 в документе: Line No.6 is not found in Spreadsheet document on the form
